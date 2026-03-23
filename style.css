@@ -1,30 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Recipe Finder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fff7ed;
+}
 
-<header>
-    <h1>🍽 Recipe Finder</h1>
-    <input type="text" id="search" placeholder="Search recipes...">
-</header>
+header {
+    background: #ea580c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-<div id="filters">
-    <button onclick="filterCategory('All')">All</button>
-    <button onclick="filterCategory('Breakfast')">Breakfast</button>
-    <button onclick="filterCategory('Lunch')">Lunch</button>
-    <button onclick="filterCategory('Dinner')">Dinner</button>
-    <button onclick="filterCategory('Snacks')">Snacks</button>
-</div>
+input {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+}
 
-<h2>Recipes</h2>
-<div id="recipes"></div>
+#filters {
+    text-align: center;
+    margin: 20px;
+}
 
-<h2>❤️ Favourites</h2>
-<div id="favorites"></div>
+button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background: #fb923c;
+    color: white;
+    border-radius: 5px;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+#recipes, #favorites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
