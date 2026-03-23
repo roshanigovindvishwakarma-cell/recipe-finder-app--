@@ -54,7 +54,7 @@ function displayFav() {
 
     favorites.forEach(f => {
         container.innerHTML += `
-        <div class="card">
+        <div class="card" onclick="showDetails('${r.name}')">
             ${f}
             <button onclick="removeFav('${f}')">❌ Remove</button>
         </div>`;
@@ -85,3 +85,12 @@ document.getElementById("search").addEventListener("input", function() {
 
 displayRecipes(recipes);
 displayFav();
+function showDetails(name) {
+    const recipe = recipes.find(r => r.name === name);
+
+    alert(
+        recipe.name + "\n\n" +
+        "Ingredients: " + recipe.ingredients.join(", ") + "\n\n" +
+        "Steps: " + recipe.steps.join(" → ")
+    );
+}
