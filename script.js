@@ -1,5 +1,12 @@
 const recipes = [
-    {name:"Pasta", category:"Lunch", time:"20 min", difficulty:"Easy"},
+    {
+name:"Pasta",
+category:"Lunch",
+time:"20 min",
+difficulty:"Easy",
+ingredients:["Pasta","Sauce","Cheese"],
+steps:["Boil pasta","Add sauce","Mix"]
+}
     {name:"Biryani", category:"Dinner", time:"45 min", difficulty:"Hard"},
     {name:"Sandwich", category:"Breakfast", time:"10 min", difficulty:"Easy"},
     {name:"Burger", category:"Snacks", time:"15 min", difficulty:"Medium"},
